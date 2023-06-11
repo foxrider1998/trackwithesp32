@@ -11,6 +11,7 @@ function SignUp() {
     try {
       await auth.createUserWithEmailAndPassword(email, password);
       // Tambahkan logika atau perubahan status yang diperlukan setelah sign up berhasil
+      
     } catch (error) {
       console.log(error);
     }
