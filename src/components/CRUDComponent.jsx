@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
-import { database } from '../firebase';
+import {firebase, databaseRef}  from '../firebase';
 
 function CRUD() {
   const [data, setData] = useState([]);
@@ -11,7 +11,7 @@ function CRUD() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const snapshot = await database.ref('/items').once('value');
+        const snapshot = await databaseRef.once('value');
         const items = snapshot.val();
         if (items) {
           const data = Object.entries(items).map(([key, value]) => ({ id: key, name: value }));

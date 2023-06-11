@@ -1,19 +1,32 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import { auth } from '../firebase';
+import { useHistory } from 'react-router-dom';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+
+import GoogleLoginButton from "./loginWithGoogle";
+
 
 function SignIn() {
+  const auth = getAuth();
+  const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSignIn = async (e) => {
+    
+
     e.preventDefault();
-    try {
-      await auth.signInWithEmailAndPassword(email, password);
-      // Tambahkan logika atau perubahan status yang diperlukan setelah sign in berhasil
-    } catch (error) {
-      console.log(error);
-    }
+
+    // for login 
+    signInWithEmailAndPassword(auth, email, password).then((auth) => {
+     console.log(auth);
+      if (auth) {
+          // if successfully signed in, redirect the new user to the home page
+          history.push('/student');
+     }
+     }).catch(error => alert(error.message));
+ 
   };
 
   return (
@@ -34,8 +47,9 @@ function SignIn() {
         />
         <button type="submit">Sign In</button>
       </form>
+    <GoogleLoginButton/>
     </div>
   );
-}
+};
 
 export default SignIn;
