@@ -3,8 +3,8 @@
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
-import 'firebase/compat/database';
-
+import 'firebase/compat/database'
+import 'firebase/database'
 
 
 import { getEnvironments } from "./helpers/getEnvironments";
@@ -33,9 +33,9 @@ const firebaseConfig = {
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 };
-
-
- const auth = firebase.auth;
+const auth = firebase.auth;
 const databaseRef = firebase.database().ref('test');
-export  {firebase, databaseRef, auth};
+const database = firebase.database();
+export  {database, firebase, databaseRef, auth};
+
 
