@@ -1,7 +1,7 @@
 import { useEffect ,useState } from 'react';
 import {firebase, databaseRef}  from '../firebase';
 
-import MapComponent from './MapComponent';
+import MapBox from './MapComponent';
 import PersonalDataComponent from './PersonalDataComponent';
 
 function StudentDashboard() {
@@ -25,7 +25,7 @@ function StudentDashboard() {
   return (
     <div>
       <h1>Student Dashboard</h1>
-      <MapComponent /> {/* Komponen yang menampilkan peta */}
+      <MapBox /> {/* Komponen yang menampilkan peta */}
 
  <h1>User Info</h1>
       <ul>
