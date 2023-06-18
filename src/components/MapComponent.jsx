@@ -22,6 +22,11 @@ function MapBox() {
       }
     };
     fetchCoordinates();
+     // Update coordinates every 5 seconds
+     const intervalId = setInterval(fetchCoordinates, 5000);
+
+     // Cleanup the interval on component unmount
+     return () => clearInterval(intervalId);
   }, []);
 
   if (loading) {
