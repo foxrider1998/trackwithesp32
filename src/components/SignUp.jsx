@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import { auth } from '../firebase';
-
+import "./sty.css"
 function SignUp() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -18,22 +18,29 @@ function SignUp() {
   };
 
   return (
-    <div>
+    <div className='card'>
       <h2>Sign Up</h2>
       <form onSubmit={handleSignUp}>
-        <input
+        <div className='column'>
+        <div className='row'>
+        <input 
           type="email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <input
+        </div>
+
+        <div className='row'> 
+        <input 
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Sign Up</button>
+        </div>
+        </div>
+        <button className='SignInButton' type="submit">Sign Up</button>
       </form>
     </div>
   );

@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 import { auth } from '../firebase';
 import { useHistory } from 'react-router-dom';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-
-import GoogleLoginButton from "./loginWithGoogle";
+import "./sty.css"
 
 
 function SignIn() {
@@ -30,24 +29,30 @@ function SignIn() {
   };
 
   return (
-    <div>
+    <div className='card'>
       <h2>Sign In</h2>
       <form onSubmit={handleSignIn}>
+      <div  className='column'>
+        <div className='row'>
         <input
           type="email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
+        </div>
+        <div className='row'>
         <input
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Sign In</button>
+        </div>
+        </div>
+        <button className='SignInButton ' type="submit">Sign In</button>
       </form>
-    <GoogleLoginButton/>
+    
     </div>
   );
 };

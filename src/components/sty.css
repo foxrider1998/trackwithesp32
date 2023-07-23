@@ -1,0 +1,153 @@
+.landing-page {
+    
+  position: absolute;
+  top: 0%;
+  left: 0%;
+    background-position: center;
+    /* Additional styles for the background if needed */
+  }
+  .landing-bg {
+    background-image: url('../assets/img/iot.jpg');
+    background-size: 100% 100%;
+ 
+  position: absolute;
+  top: 0%;
+  left: 0%;
+    background-position: center;
+    height: 100%; /* Set the height to 100% of the viewport height */
+    width: 100%; /* Set the width to 100% of the viewport width */
+    /* Additional styles for the background if needed */
+
+}
+.parents-bg {
+  background-image: url('../assets/img/bg1.png');
+  background-size: 100% 100%;
+
+position: absolute;
+top: 0%;
+left: 0%;
+  background-position: center;
+  height: 100%; /* Set the height to 100% of the viewport height */
+  width: 100%; /* Set the width to 100% of the viewport width */
+  /* Additional styles for the background if needed */
+
+}
+.student-bg {
+  background-image: url('../assets/img/bg2.jpg');
+  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+/* position: absolute;
+top: 0%;
+left: 0%;
+  background-position: center;
+  height: 100%; /* Set the height to 100% of the viewport height */
+  /* width: 100%;  */
+
+}
+  
+.card {
+    
+  padding: 20px;
+    margin-left: 20px;
+     position: absolute;
+    top: -200%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(37, 35, 73, 0.806);
+   
+}
+.card2 {
+  margin: 0% ;
+  padding: 5px;
+  position: absolute;
+  top: 77%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+    background-color: rgba(114, 133, 168, 0.806);
+   
+}
+.cright{
+   
+    background-color: rgba(17, 34, 112, 0.806);
+   
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  .container-rel {
+    position: relative;
+  }
+  .row {
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .column {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .username {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .password {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  .title {
+    position: absolute;
+    left: 0;
+    top: 2%;
+    transform: translateY(-10%);
+    margin: 0;
+    padding: 10px;
+    font-size: 24px;
+    animation: slideIn 1s ease-in-out infinite;
+  }
+  .title2 {
+    position: absolute;
+    left: 0;
+    top: 5%;
+    transform: translateY(-15%);
+    margin: 2;
+    padding: 10px;
+    font-size: 20px;
+    animation: slideIn 1s ease-in-out infinite;
+  }
+  .center {
+    position: absolute;
+    top: 85%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+  }
+  .SignInButton {
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateY(-10%);
+    }
+    50% {
+      transform: translateY(-5%);
+    }
+    100% {
+      transform: translateY(-10%);
+    }
+  }
